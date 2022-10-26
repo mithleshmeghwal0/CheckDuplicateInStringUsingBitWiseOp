@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-const Str = "finding"
+const Str = "aninija"
 
 func main() {
 	var h int32 = 0
@@ -19,11 +19,7 @@ func main() {
 		if (x & h) > 0 { // ANDing the bits of h and x
 			fmt.Printf("Duplicate found %c\n", val)
 		} else {
-			fmt.Println("x & h ", strconv.FormatInt(int64(x&h), 2))
+			h = h | x
 		}
-		fmt.Println()
-		h += x
-		x = 1
-
 	}
 }
